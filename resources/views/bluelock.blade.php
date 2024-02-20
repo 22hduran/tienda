@@ -17,18 +17,21 @@
          height: 100vh;
          }
          header {
-         background-color: #251296;
+         display: flex;
+         justify-content: space-around;
+         background-color: #3a73ff;
          color: #000000;
          text-align: center;
          padding: 1em;
          border-bottom: 1px solid #000000;
          }
          header img {
-         position: absolute;
-         left: 30px;
-         top: 33px;
          height: 50px;
          cursor: pointer;
+         margin-top: 20px;
+         }
+         header button {
+         margin-top: 35px;
          }
          nav {
          background-color: #444;
@@ -75,7 +78,7 @@
          height: 40px;
          border-radius: 12px;
          border: none;
-         background-color: #0000d9;
+         background-color: #3a73ff;
          display: flex;
          align-items: center;
          justify-content: center;
@@ -142,8 +145,9 @@
    </head>
    <body>
       <header>
-        <a href="{{URL('/')}}"><img src="inicio.png"></a>
+         <a href="{{URL('/')}}"><img src="inicio.png"></a>
          <h1> BLUE LOCK </h1>
+         <a href=""><button>AÑADIR CAMISETA</button></a>
       </header>
       <section>
          <div class="card">

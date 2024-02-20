@@ -17,6 +17,23 @@
          height: 100vh;
          }
 
+         header {
+            display: flex;
+            justify-content: space-around;
+         }
+
+         header img {
+            height: 50px;
+            cursor: pointer;
+            margin-top: 20px;
+         }
+
+         header button {
+            background-color: #018d16;
+            color: #018d16;
+            border: none;
+         }
+
         .botones {
             display: flex;
             justify-content: center;
@@ -82,7 +99,7 @@
         }
 
         header {
-         background-color: #051307;
+         background-color: #018d16;
          color: white;
          text-align: center;
          padding: 1em;
@@ -91,8 +108,10 @@
     </style>
 </head>
 <body>
-    <header>
+      <header>
+         <a href="{{URL('/')}}"><img src="inicio.png"></a>
          <h1> FUTMANGA SHOP </h1>
+         <button>AAAAA</button>
       </header>
 
       <div class="botones">    

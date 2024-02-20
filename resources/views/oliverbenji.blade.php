@@ -17,6 +17,8 @@
          height: 100vh;
          }
          header {
+         display: flex;
+         justify-content: space-around;
          background-color: #961212;
          color: #000000;
          text-align: center;
@@ -25,11 +27,13 @@
          }
 
          header img {
-         position: absolute;
-         left: 30px;
-         top: 33px;
          height: 50px;
          cursor: pointer;
+         margin-top: 20px;
+         }
+
+         header button {
+            margin-top: 35px;
          }
 
          nav {
@@ -145,8 +149,9 @@
    </head>
    <body>
       <header>
-        <a href="{{URL('/')}}"><img src="inicio.png"></a>
+         <a href="{{URL('/')}}"><img src="inicio.png"></a>
          <h1> OLIVER & BENJI </h1>
+         <a href=""><button>AÑADIR CAMISETA</button></a>
       </header>
       <section>
          <div class="card">

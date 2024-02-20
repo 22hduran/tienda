@@ -17,3 +17,8 @@ Route::get('/bluelock', function () {
 Route::get('/oliverbenji', function () {
     return view('oliverbenji');
 });
+
+Route::get('/crear', function () {
+    return view('crear');
+});
+

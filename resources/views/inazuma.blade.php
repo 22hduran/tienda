@@ -17,19 +17,25 @@
          height: 100vh;
          }
          header {
+         display: flex;
+         justify-content: space-around;
          background-color: #e3b900;
          color: #000000;
          text-align: center;
          padding: 1em;
          border-bottom: 1px solid #000000;
          }
-
          header img {
-         position: absolute;
+         /* position: absolute;
          left: 30px;
-         top: 33px;
+         top: 33px; */
          height: 50px;
+         margin-top: 20px;
          cursor: pointer;
+         }
+
+         header button {
+            margin-top: 35px;
          }
          nav {
          background-color: #444;
@@ -145,6 +151,7 @@
       <header>
          <a href="{{URL('/')}}"><img src="inicio.png"></a>
          <h1> INAZUMA </h1>
+         <a href="/crear"><button>AÑADIR CAMISETA</button></a>
       </header>
       <section>
          <div class="card">
