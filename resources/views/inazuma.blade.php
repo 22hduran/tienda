@@ -149,16 +149,17 @@
    </head>
    <body>
       <header>
-         <a href="{{URL('/')}}"><img src="inicio.png"></a>
+         <a href="{{URL('/')}}"><img src="logoFutbol.png"></a>
          <h1> INAZUMA </h1>
          <a href="/crear"><button>AÑADIR CAMISETA</button></a>
       </header>
       <section>
+         @foreach ($camisetas as $camiseta)
          <div class="card">
-            <img src="inazumaJapon.png" alt="Producto 1">
+            <img src="{{$camiseta->urlFoto}}">
             <div class="card-content">
-               <h3 class="product-name">Equipación Inazuma Japon</h3>
-               <p class="product-price">19.99€</p>
+               <h3 class="product-name">{{$camiseta->camiseta}}</h3>
+               <p class="product-price">{{$camiseta->precio}}€</p>
                <button class="CartBtn">
                   <span class="IconContainer">
                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="rgb(17, 17, 17)" class="cart">
@@ -169,51 +170,7 @@
                </button>
             </div>
          </div>
-         <div class="card">
-            <img src="raimon.png" alt="Producto 2">
-            <div class="card-content">
-               <h3 class="product-name">Equipación Raimon</h3>
-               <p class="product-price">19.99€</p>
-               <button class="CartBtn">
-                  <span class="IconContainer">
-                     <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="rgb(17, 17, 17)" class="cart">
-                        <path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path>
-                     </svg>
-                  </span>
-                  <p class="text">Añadir a la cesta</p>
-               </button>
-            </div>
-         </div>
-         <div class="card">
-            <img src="royalAcademy.png" alt="Producto 3">
-            <div class="card-content">
-               <h3 class="product-name">Equipación Royal Academy</h3>
-               <p class="product-price">19.99€</p>
-               <button class="CartBtn">
-                  <span class="IconContainer">
-                     <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="rgb(17, 17, 17)" class="cart">
-                        <path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path>
-                     </svg>
-                  </span>
-                  <p class="text">Añadir a la cesta</p>
-               </button>
-            </div>
-         </div>
-         <div class="card">
-            <img src="zeus.png" alt="Producto 4">
-            <div class="card-content">
-               <h3 class="product-name">Equipación Zeus</h3>
-               <p class="product-price">19.99€</p>
-               <button class="CartBtn">
-                  <span class="IconContainer">
-                     <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="rgb(17, 17, 17)" class="cart">
-                        <path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path>
-                     </svg>
-                  </span>
-                  <p class="text">Añadir a la cesta</p>
-               </button>
-            </div>
-         </div>
+         @endforeach
       </section>
       <footer>
          <p>&copy; 2024 FutManga Shop. Todos los derechos reservados.</p>

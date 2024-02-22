@@ -109,7 +109,7 @@
 </head>
 <body>
       <header>
-         <a href="{{URL('/')}}"><img src="inicio.png"></a>
+         <a href="{{URL('/')}}"><img src="logoFutbol.png"></a>
          <h1> FUTMANGA SHOP </h1>
          <button>AAAAA</button>
       </header>
