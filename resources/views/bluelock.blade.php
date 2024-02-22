@@ -147,7 +147,7 @@
       <header>
          <a href="{{URL('/')}}"><img src="logoFutbol.png"></a>
          <h1> BLUE LOCK </h1>
-         <a href=""><button>AÑADIR CAMISETA</button></a>
+         <a href="{{route('camisetas.create')}}"><button>AÑADIR CAMISETA</button></a>
       </header>
       <section>
          @foreach ($camisetas as $camiseta)

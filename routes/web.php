@@ -13,7 +13,5 @@ Route::get('/bluelock', [CamisetaController::class, 'mostrarCamisetasBluelock'])
 
 Route::get('/oliverbenji', [CamisetaController::class, 'mostrarCamisetasOliverbenji']);
 
-Route::get('/crear', function () {
-    return view('crear');
-});
+Route::resource('/camisetas', CamisetaController::class);
 
